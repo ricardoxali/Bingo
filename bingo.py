@@ -16,7 +16,7 @@ def cartela(m):
             n = random.randint(21, 30)
             if n not in coluna3:
                 coluna3.append(n)
-        return [[coluna1[i], coluna2[i], coluna3[i]] for i in range(2)]
+        cartela = [[coluna1[i], coluna2[i], coluna3[i]] for i in range(2)]
 
     if m == 1:  # Modo demorado
         while len(coluna1) < 2:
@@ -35,7 +35,8 @@ def cartela(m):
             n = random.randint(31, 40)
             if n not in coluna4:
                 coluna4.append(n)
-        return [[coluna1[i], coluna2[i], coluna3[i], coluna4[i]] for i in range(2)]
+        cartela = [[coluna1[i], coluna2[i], coluna3[i], coluna4[i]] for i in range(2)]
+    return cartela
 
 def mostrar_cartela(cartela):
     for linha in cartela:
